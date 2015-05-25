@@ -24,7 +24,7 @@
 	</div>
 	<div class="row" ng-controller='productsController'>
 		<div class="row">
-			<input type="text" placeholder="search name..." ng-model="filter_product" class="input-sm product_search">
+			<input type="text" placeholder="search name..." ng-model="filter_product" class="input-sm">
 		</div>
 	    <div class="col-md-4 portfolio-item" ng-repeat='product in products | filter: filter_product | limitTo: limitedAmount'>
 	        <img class="img-responsive" ng-src="{{ product.image }}" alt='Image'>

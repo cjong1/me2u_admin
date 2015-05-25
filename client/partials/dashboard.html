@@ -14,7 +14,7 @@
 <!-- grab amount of product stored in database -->
 		<p>(<span ng-bind='product.quantity'></span> left)</p>
 	</div>
-	<button ng-click="showAllProducts()" class="show_more center-block btn-primary">show more</button>
+	<button ng-click="showAllProducts()" class="show_more_products center-block btn-primary">show more</button>
 	<div class="row"></div>
 
 <!-- Get recent orders -->
@@ -22,7 +22,7 @@
 	<div ng-repeat='order in orders | orderBy:"-created" | filter: filter | limitTo: limitedOrder'>
 		<p><span ng-bind='order.name' ng-model='filter'></span> purchased <span ng-bind='order.quantity'></span> <span ng-bind='order.product'></span>(s).</p>
 	</div>
-	<button ng-click="showAllOrders()" class="show_more btn-primary">show more</button>
+	<button ng-click="showAllOrders()" class="show_more_orders btn-primary">show more</button>
 	<div class="row"></div>
 
 <!-- Get newest customers -->
@@ -30,6 +30,6 @@
 	<div ng-repeat='customer in customers | orderBy:"-created" | filter: filter | limitTo: limitedCustomer '>
 		<p><span ng-bind='customer.name'></span> joined the store.</p>
 	</div>
-	<button ng-click="showAllCustomers()" class="show_more btn-primary">show more</button>
+	<button ng-click="showAllCustomers()" class="show_more_customers btn-primary">show more</button>
 	<div class="row"></div>
 </div>

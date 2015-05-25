@@ -1,5 +1,23 @@
 me2u_store.controller('dashboardController', function ($scope, storeFactory){
 
+	$(document).ready(function(){
+	    $(".show_more_products").click(function(){
+	        $(".show_more_products").hide();
+	    });
+	});
+
+	$(document).ready(function(){
+	    $(".show_more_orders").click(function(){
+	        $(".show_more_orders").hide();
+	    });
+	});
+
+	$(document).ready(function(){
+	    $(".show_more_customers").click(function(){
+	        $(".show_more_customers").hide();
+	    });
+	});
+
 	storeFactory.getCustomers(function(data){
 		$scope.customers = data;
 	})
