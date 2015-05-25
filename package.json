@@ -1,0 +1,11 @@
+{
+  "name": "Me2U_Store",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular-moment": "^0.10.0",
+    "body-parser": "^1.12.2",
+    "express": "~4.2.0",
+    "moment": "^2.10.2",
+    "mongoose": "^4.0.1"
+  }
+}
