@@ -3,6 +3,12 @@ me2u_store.controller('productsController', function ($scope, storeFactory){
 	// set the amount of products to be shown when page first loads
 	$scope.limitedAmount = 12;
 
+	$(document).ready(function(){
+	    $(".show_more").click(function(){
+	        $(".show_more").hide();
+	    });
+	});
+
 	// get all the products from the factory
 	storeFactory.getProducts(function(data){
 		$scope.products = data;

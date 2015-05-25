@@ -16,19 +16,22 @@
 		  	</div>
 		  	<div class="form-group col-xs-8">
 		    	<label for="quantity">Quantity:</label>
-				<input type="number" class="form-control" id="quantity" ng-model="newProduct.quantity" min="1">
+				<input type="number" class="input-sm" id="quantity" ng-model="newProduct.quantity" min="1">
 		  	</div>
 		  	<div class="row"></div>
 		  	<button type="submit" class="btn btn-primary">Add new product</button>
 		</form>
 	</div>
 	<div class="row" ng-controller='productsController'>
-	    <div class="col-md-4 portfolio-item" ng-repeat='product in products | filter: filter_name | limitTo: limitedAmount'>
+		<div class="row">
+			<input type="text" placeholder="search name..." ng-model="filter_product" class="input-sm product_search">
+		</div>
+	    <div class="col-md-4 portfolio-item" ng-repeat='product in products | filter: filter_product | limitTo: limitedAmount'>
 	        <img class="img-responsive" ng-src="{{ product.image }}" alt='Image'>
 	        <h3 ng-bind='product.name'></h3>
 			<p>(<span ng-bind='product.quantity'></span> left)</p>
 	    </div>
 	    <div class="row"></div>
-	    <a href="" ng-click='showAllProducts()'>show more...</a>
+	    <button ng-click='showAllProducts()' class="show_more center-block btn-primary">show more</button>
 	</div>
 </div>

@@ -134,10 +134,19 @@ footer {
     margin: 15px;
 }
 
+button {
+    padding-top: 6px
+}
+
 .form {
     margin-bottom: 15px;
 }
 
 .input-sm {
     margin-bottom: 10px;
+}
+
+.show_more {
+    font-size: 15px;
+    margin-bottom: 40px;
 }
