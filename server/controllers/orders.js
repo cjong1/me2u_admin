@@ -4,6 +4,8 @@ var Product = mongoose.model('Product');
 
 module.exports =(function() {
 	return {
+
+// grab all orders from database
 		show: function(req, res) {
 			Order.find({}, function(err, results) {
 				if(err) {
@@ -14,6 +16,7 @@ module.exports =(function() {
 			})
 		},
 
+// add new order to database 
 		add: function(req, res) {
 			var new_order = new Order({name: req.body.name, product: req.body.product, quantity: req.body.quantity});
 			Product.findOne({name: req.body.product}, function(err, product){

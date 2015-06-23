@@ -3,6 +3,8 @@ var Product = mongoose.model('Product');
 
 module.exports =(function() {
 	return {
+
+// grab all products from database
 		show: function(req, res) {
 			Product.find({}, function(err, results) {
 				if(err) {
@@ -13,6 +15,7 @@ module.exports =(function() {
 			})
 		},
 
+// add new product to database 
 		add: function(req, res) {
 			var new_product = new Product({name: req.body.name, image: req.body.image, description: req.body.description, quantity: req.body.quantity});
 			new_product.save(function(err, response) {

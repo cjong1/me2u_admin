@@ -24,6 +24,7 @@ me2u_store.controller('productsController', function ($scope, storeFactory){
 		})
 	}
 
+	// show all products
 	$scope.showAllProducts = function() {
 		$scope.limitedAmount = 100;
 	}

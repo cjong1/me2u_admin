@@ -1,6 +1,6 @@
 var me2u_store = angular.module('me2u_store', ['ngRoute']);
 
-// Routes for partials
+// Use the config method to set up routing for partials
 me2u_store.config(function ($routeProvider) {
 	$routeProvider
 		.when('/', {
