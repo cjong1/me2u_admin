@@ -3,6 +3,8 @@ var Customer = mongoose.model('Customer');
 
 module.exports = (function() {
 	return {
+
+// grab all customers from database
 		show: function(req, res) {
 			Customer.find({}, function(err, results){
 				if(err)
@@ -16,6 +18,7 @@ module.exports = (function() {
 			})
 		},
 
+// add new customer to database 
 		add: function(req, res) {
 			var new_customer = new Customer({name: req.body.name, email: req.body.email, phone: req.body.phone});
 			Customer.findOne({name: req.body.name}, function(err, customer){
@@ -36,6 +39,7 @@ module.exports = (function() {
 			})
 		},
 
+// remove customer with specific id from database
 		remove: function(req, res) {
 			Customer.remove({_id: req.body._id}, function(err, response) {
 				if(err) {
